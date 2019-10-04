@@ -10,6 +10,15 @@ class ListCreateJobsView(generics.ListCreateAPIView):
     serializer_class = JobSerializer
 
 
+class RUDJobsView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Job.objects.all()
+    serializer_class = JobSerializer
+
+    def get_queryset(self):
+        queryset = self.queryset.filter(id=self.kwargs["pk"])
+        return queryset
+
+
 class ListCreateTripsView(generics.ListCreateAPIView):
     queryset = Trip.objects.all()
     serializer_class = TripSerializer
