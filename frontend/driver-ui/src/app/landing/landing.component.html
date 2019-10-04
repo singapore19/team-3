@@ -1,0 +1,162 @@
+<main>
+  <div class="position-relative">
+    <!-- shape Hero -->
+    <section class="section section-lg section-shaped pb-250">
+      <div class="shape shape-style-1 shape-primary alpha-4">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="container py-lg-md d-flex">
+        <div class="col px-0">
+          <div class="row text-center">
+            <div class="col-lg-6">
+              <h1 class="display-3 text-white">Welcome David!</h1>
+              <p class="lead  text-white">You are left with</p>
+
+              <h2 class="display-3 text-white">
+                {{ remainingTrips }} trips
+              </h2>
+
+              <p class="lead text-white">for today</p>
+              <div class="btn-wrapper">
+                <a
+                  href="./assets/schedule.xlsx"
+                  class="btn btn-info btn-icon mb-3 mb-sm-0"
+                  download
+                >
+                  <span class="btn-inner--text">Download schedule</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew">
+        <svg
+          x="0"
+          y="0"
+          viewBox="0 0 2560 100"
+          preserveAspectRatio="none"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+    <!-- 1st Hero Variation -->
+  </div>
+  <section class="section section-lg pt-lg-0 mt--200">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="row row-grid">
+            <div *ngIf="showCard" class="col-lg-4">
+              <div class="card card-lift--hover shadow border-0">
+                <div class="card-body py-5">
+                  <div
+                    class="icon icon-shape icon-shape-primary rounded-circle mb-4"
+                  >
+                    <i class="ni ni-check-bold"></i>
+                  </div>
+                  <h6 class="text-primary text-uppercase">Trip 1 <span class="fourteen">14 minutes</span> </h6>
+                  
+                  <p class="description mt-3">
+                    <span style="color:red">Destination 1:</span>
+                    MOE HQ (Buona Vista), 1 N Buona Vista Dr
+                  </p>
+                  <p class="description mt-3">
+                    <span style="color:red">Destination 2:</span>
+
+                    JTC Launchpad, 73A Ayer Rajah Crescent
+                  </p>
+                  <p class="description mt-3">
+                    <span style="color:red">Destination 3:</span>
+
+                    National University Hospital, 5 Lower Kent Ridge Rd
+                  </p>
+                  <div>
+                    <span class="badge badge-pill badge-primary">Buona Vista</span>
+                    <span class="badge badge-pill badge-primary">Eunos</span>
+                    <span class="badge badge-pill badge-primary">Kent Ridge</span>
+                  </div>
+                  <a routerLink="/trip" class="btn btn-primary mt-4">Direction</a>
+                  <a routerLink="" (click)=updateDone() class="btn btn-primary mt-4">Done</a>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-lift--hover shadow border-0">
+                  <div class="card-body py-5">
+                      <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
+                          <i class="ni ni-istanbul"></i>
+                      </div>
+                      <h6 class="text-success text-uppercase">Trip 2 <span class="fourteen">40 minutes</span></h6>
+                      <p class="description mt-3">
+                          <span style="color:red">Destination 1:</span>
+                          Red Cross Academy, 60A Orchard Road
+                      </p>
+                      <p class="description mt-3">
+                          <span style="color:red">Destination 2:</span>
+                          Financial Women's Association, 111 North Bridge Road
+                      </p>
+                      <p class="description mt-3">
+                          <span style="color:red">Destination 3:</span>
+                          Make-A-Wish Foundation, 1 Coleman Street
+                      </p>
+                      <div>
+                          <span class="badge badge-pill badge-success">Orchard</span>
+                          <span class="badge badge-pill badge-success">City Hall </span>
+                          <span class="badge badge-pill badge-success">City Hall</span>
+                      </div>
+                      <a href="javascript:void(0)" class="btn btn-success mt-4">Direction</a>
+                      <a (click)=updateDone() class="btn btn-succcess mt-4">Done</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-lift--hover shadow border-0">
+                  <div class="card-body py-5">
+                      <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
+                          <i class="ni ni-planet"></i>
+                      </div>
+                      <h6 class="text-warning text-uppercase">Trip 3 <span class="fourteen">56 minutes</span></h6>
+                      <p class="description mt-3">
+                          <span style="color:red">Destination 1:</span>
+                          Diabetes Singapore, 22 Boon Keng Road
+                      </p>
+                      <p class="description mt-3">
+                          <span style="color:red">Destination 2:</span>
+                          Lions Befrienders Senior Activity Centre, 32 Bendemeer Road
+                      </p>
+                      <p class="description mt-3">
+                          <span style="color:red">Destination 3:</span>
+                          World Vision International Singapore, 10 Tannery Ln
+                      </p>
+                      <div>
+                          <span class="badge badge-pill badge-warning">Boon Keng</span>
+                          <span class="badge badge-pill badge-warning">Bendeemer</span>
+                          <span class="badge badge-pill badge-warning">Potong Pasir</span>
+                      </div>
+                      <a href="javascript:void(0)" class="btn btn-warning mt-4">Direction</a>
+                      <a (click)=updateDone() class="btn btn-warning mt-4">Done</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+</main>
