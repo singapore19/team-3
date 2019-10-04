@@ -16,9 +16,11 @@ class TripSerializer(serializers.ModelSerializer):
 
 
 class TripJobSerializer(serializers.ModelSerializer):
+    job = JobSerializer()
+
     class Meta:
         model = TripJob
-        fields = "__all__"
+        fields = ("trip_id", "job")
 
 
 class LeaveSerializer(serializers.ModelSerializer):
